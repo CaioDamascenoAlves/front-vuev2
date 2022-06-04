@@ -1,32 +1,18 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div class="conteiner-flex">
+	  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <a class="navbar-brand order-md-last">CRUD Vue.Js + PostgreSQL + Node.js + Azure</a>
+	  		<ul class="navbar-nav me-auto">
+				  <li class="nav-item">
+					  <router-link class="nav-link" to="/">Create New Called</router-link>
+				  </li>
+				  <li class="nav-item">
+					  <router-link class="nav-link" to="/list-called">List All Called</router-link>
+				  </li>
+			  </ul>
+	  </nav>
+	  <div class="container mt-5">
+		  <router-view></router-view>
+	  </div>
   </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
